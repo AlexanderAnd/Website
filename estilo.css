@@ -18,4 +18,19 @@ body {
     background-position-x: 0;
 }
 
+@media (max width: 768px) {
+    body {
+        font-size: 14px;
+}
+
+.mi-frame {
+    display: flex;
+    padding: 10px;
+}
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+    }
 
