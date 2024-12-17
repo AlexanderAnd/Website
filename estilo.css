@@ -1,10 +1,11 @@
 .mi-iframe {
     position: absolute;
-    width: 60%; /* Ajusta el ancho */
-    height: 100%; /* Ajusta la altura */
+    width: 90%; /* Ocupa más espacio en móvil */
+    height: 80vh; /* Altura dinámica según la pantalla */
     top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%); /* Ajusta el centro */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none; /* Opcional: quita el borde */
 }
 
 body {
@@ -13,24 +14,18 @@ body {
     background-image: url(Curriculum.jpeg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 40%;
-    background-position-y: 5.6%;
-    background-position-x: 0;
+    background-size: cover; /* Adapta la imagen al contenedor */
+    background-attachment: fixed; /* La imagen permanece fija */
 }
 
-@media (max width: 768px) {
+/* Media Query para Móviles */
+@media screen and (max-width: 768px) {
+    .mi-iframe {
+        width: 100%; /* Ocupa todo el ancho */
+        height: 90vh; /* Ajuste mejorado de altura */
+    }
     body {
-        font-size: 14px;
-}
-
-.mi-frame {
-    display: flex;
-    padding: 10px;
-}
-    img {
-        width: 100%;
-        height: auto;
+        background-size: contain; /* Imagen ajustada para móviles */
+        background-position: center;
     }
 }
-    }
-
